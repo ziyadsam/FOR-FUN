@@ -1,33 +1,159 @@
+
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقعي الخرافي</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>متجر أبو سلطان | ألعاب ستيم وحسابات مشتركة</title>
+<meta name="description" content="متجر أبو سلطان لبيع ألعاب ستيم والحسابات المشتركة بأفضل الأسعار وخصومات حصرية." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <header class="header">
-        <h1> يالله حيهم شباب الستريك</h1>
-       <p class="fade-in delay">✨ صلوا على النبي ﷺ ✨</p>
-    </header>
+  <!-- شريط الإعلانات المتحرك -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>🎁 استخدم كود <b>Z1</b> لخصم 5%</span>
+      <span>🔥 كود <b>SULTAN10</b> لخصم 10%</span>
+      <span>👑 كود <b>VIP20</b> لخصم 20%</span>
+      <span>🚀 توصيل فوري للحسابات</span>
+      <span>🎁 استخدم كود <b>Z1</b> لخصم 5%</span>
+      <span>🔥 كود <b>SULTAN10</b> لخصم 10%</span>
+      <span>👑 كود <b>VIP20</b> لخصم 20%</span>
+      <span>🚀 توصيل فوري للحسابات</span>
+    </div>
+  </div>
 
-    <section class="hero">
-        <h2 class="fade-in">تيست جميل </h2>
-    
-        <button onclick="changeText()">اضغط هنا ✨</button>
-        <p id="text"></p>
+  <!-- الهيدر -->
+  <header class="header">
+    <div class="container header-inner">
+      <button class="icon-btn" id="menuBtn" aria-label="القائمة">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <a href="#home" class="logo" data-nav="home">
+        <span class="logo-mark">AS</span>
+        <span>متجر أبو سلطان</span>
+      </a>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="السلة">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M6 6L4 2H2"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- الصفحة الرئيسية -->
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="container hero-inner">
+          <span class="badge">⚡ متجر ألعاب ستيم #1</span>
+          <h1>أفضل <span class="text-gradient">ألعاب ستيم</span><br/>وحسابات مشتركة</h1>
+          <p>اكتشف أقوى العروض على ألعابك المفضلة بأسعار لا تُقاوم وتسليم فوري وضمان كامل.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-nav="products">تسوق الآن</button>
+            <button class="btn btn-ghost" data-nav="about">من نحن</button>
+          </div>
+        </div>
+        <div class="hero-glow"></div>
+      </div>
+
+      <div class="container section">
+        <h2 class="section-title">المنتجات المميزة</h2>
+        <div class="grid" id="featuredGrid"></div>
+      </div>
     </section>
 
-    <section class="cards">
-     
+    <!-- صفحة المنتجات -->
+    <section class="page" id="page-products">
+      <div class="container section">
+        <h2 class="section-title">جميع المنتجات</h2>
+        <p class="section-sub">اختر منتجك المفضل وأضفه إلى السلة</p>
+        <div class="grid" id="productsGrid"></div>
+      </div>
     </section>
 
-    <footer>
-        <p>© جميع الحقوق محفوظة لابو سلطان</p>
-    </footer>
+    <!-- صفحة من نحن -->
+    <section class="page" id="page-about">
+      <div class="container section narrow">
+        <h2 class="section-title">من نحن</h2>
+        <div class="card-block">
+          <p>متجر <b>أبو سلطان</b> هو وجهتك الأولى لشراء ألعاب ستيم والحسابات المشتركة بأفضل الأسعار في الوطن العربي.</p>
+          <p>نقدم ضمان كامل، تسليم فوري بعد الدفع، ودعم فني على مدار الساعة.</p>
+          <ul class="features">
+            <li>⚡ تسليم فوري</li>
+            <li>🛡️ ضمان كامل</li>
+            <li>💬 دعم فني 24/7</li>
+            <li>💎 أسعار منافسة</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- صفحة التواصل -->
+    <section class="page" id="page-contact">
+      <div class="container section narrow">
+        <h2 class="section-title">تواصل معنا</h2>
+        <div class="card-block">
+          <div class="contact-row">📧 البريد: support@abosultan.store</div>
+          <div class="contact-row">📱 واتساب: 00966500000000</div>
+          <div class="contact-row">💬 ديسكورد: AbuSultan#0001</div>
+          <form class="contact-form" onsubmit="event.preventDefault(); showToast('تم إرسال رسالتك ✅');">
+            <input type="text" placeholder="الاسم" required />
+            <input type="email" placeholder="البريد الإلكتروني" required />
+            <textarea placeholder="رسالتك" rows="4" required></textarea>
+            <button class="btn btn-primary" type="submit">إرسال</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 متجر أبو سلطان — جميع الحقوق محفوظة</div>
+  </footer>
+
+  <!-- القائمة الجانبية -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="side-menu" id="sideMenu">
+    <div class="side-head">
+      <h3>القائمة</h3>
+      <button class="icon-btn" id="closeMenu">✕</button>
+    </div>
+    <nav class="side-nav">
+      <a href="#" data-nav="home">🏠 الرئيسية</a>
+      <a href="#" data-nav="products">🎮 المنتجات</a>
+      <a href="#" data-nav="about">ℹ️ من نحن</a>
+      <a href="#" data-nav="contact">📞 تواصل معنا</a>
+    </nav>
+  </aside>
+
+  <!-- سلة التسوق -->
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="side-head">
+      <h3>سلة التسوق</h3>
+      <button class="icon-btn" id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="discount-row">
+        <input type="text" id="discountInput" placeholder="أدخل كود الخصم" />
+        <button class="btn btn-ghost" id="applyDiscount">تطبيق</button>
+      </div>
+      <div id="discountMsg" class="discount-msg"></div>
+      <div class="totals">
+        <div><span>المجموع:</span><span id="subtotal">0 ر.س</span></div>
+        <div><span>الخصم:</span><span id="discount">0 ر.س</span></div>
+        <div class="total-final"><span>الإجمالي:</span><span id="total">0 ر.س</span></div>
+      </div>
+      <button class="btn btn-primary full" onclick="showToast('تم إرسال الطلب ✅'); cart.clear();">إتمام الشراء</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
